@@ -1,2 +1,2 @@
 # CV-Afzal-Ali
-My CV
+Generated CV is named as cv.pdf
