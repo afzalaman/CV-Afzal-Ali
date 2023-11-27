@@ -1,327 +1,237 @@
-% Preamble
-% Compile with XeLateX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Authors:
+% Ali Afzal
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[11 pt,oneside,a4paper,titlepage]{article}
-\usepackage{preamble}
-\graphicspath{{PIC/}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage{multicol}
+\setlength{\columnsep}{0mm}
+%----------------------------------------------------------------------------------------
+\usepackage{lipsum}  
+
+
 \begin{document}
 
-\sidebar{sideBarColor!25}
-\simpleheader{titleBackColor}{Ali}{Afzal}{Student @ ELTE}{white}
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
 
-% Start Minipages
-\vspace*{3.49cm}% start 8 cm from the top of the page}
-    \adjustbox{valign=t}{\begin{minipage}{7.3cm} % large 7.4 cm from the top
-    \vspace*{1.2cm} % text starts 1cm under the top of the minipage
-            
-        % Picture
-        \begin{center}
-        \begin{tikzpicture}
-            \node[
-            circle,
-            minimum size=\cvPictureWidth,
-            path picture={
-            \node at (path picture bounding box.center){
-             \includegraphics[width=\cvPictureWidth]{code10.png}
-             };
-             }]
-            {};
-        \end{tikzpicture}
-        \end{center}
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Profile section
-        \ruleline{\textbf{About me}}
-        \hfill \break
-        I am currently a BSc student at Eötvös Loránd University with a keen interest in Software Engineering. I am also working as an OOP Demonstrator at the University. I am passionate about new technologies and always open to acquiring new knowledge.%
-        \hfill \break
-        \hfill \break
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Contact Section
-        \ruleline{\textbf{Contact}}
-        \hfill \break
-        \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
-        \matrix [
-        column 1/.style={anchor=center,contactIcon},
-        column 2/.style={anchor=west,align=left,contactIcon},
-        column sep=5pt,
-        row sep=5pt] (contact) {
-        \node{\faMale};
-         & \node{Born on 06/12/2002};\\
-        \node{\faEnvelope}; 
-         & \node{\href{mailto:afzal.ali.alld@gmail.com}{afzal.ali.alld@gmail.com}};\\ 
-        \node{\faPhone}; 
-         & \node{+36 705930855};\\ 
-        \node{\faMapMarker}; 
-        & \node{Ráday utca 16/15\\ 1092 Budapest, Hungary};\\
-        \node{\faLinkedinSquare}; 
-        & \node{\href{https://www.linkedin.com/in/afzal-ali-elte/}{LinkedIn - afzal-ali-elte}};\\
-        \node{\faGithubSquare}; 
-        & \node{\href{https://github.com/afzalaman}{GitHub - afzalaman}};\\
-         };
-        \end{tikzpicture} 
-        \hfill \break
-        \hfill \break
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \ruleline{\textbf{Languages}}
-        \hfill \break
-        \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
-        \matrix [
-        column 1/.style={anchor=center,contactIcon},
-        column 2/.style={anchor=west,align=left,contactIcon},
-        column sep=5pt,
-        row sep=5pt] (contact) {
-        \node{\flag{England.png}};
-        & \node{English - Professional Knowledge};\\
-        \node{\flag{India.png}};
-        & \node{Hindi - Native Language};\\
-        \node{\flag{India.png}};
-        & \node{Urdu - Native Language};\\
-        \node{\flag{Hungary.png}};
-        & \node{Hungarian - Basic Knowledge};\\
-        };
-        \end{tikzpicture} 
-        \hfill \break
-        \hfill \break
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % QR Code
-        \hfill \break
-        \begin{center}
-            \includegraphics[width=3.5cm]{gitQR.png}
-        \end{center}
-       
-        \end{minipage}}
-        \hfill 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% MAIN SECTION %%%%%%%%%%%%%%%%%%%%
-    \adjustbox{valign=t}{\begin{minipage}{11.3cm}
-        \vspace*{1cm}
-        \section*{{\faGraduationCap} EDUCATION}
-        \hfill \break
-
-        \MySection{2021-Ongoing}{elte.png}{Bachelor Degree}{Eötvös Loránd University}{Budapest, Hungary}{Faculty of Infomatics}{BSc Computer Science \\\textbf{}}
-            
-        \vspace*{0.22cm}
-            
-        \MySection{2016-2020}{cisce.png}{High School Diploma}{CISCE}{New Delhi, India}{Boys' High School \& College}{Core subjects were Science, Mathematics and Computer Science. Minors in History, Civics and Geography. \\\textbf{GPA of 3.39 out of 4}}
-
-        \hfill \break
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Work Experience
-        \section*{{\faSuitcase} WORK EXPERIENCE}
-        \hfill \break
-            
-        \MySectionNoPic{2023-}{OOP Course Demonstrator}{Budapest, Hungary}{Eötvös Loránd University}{Object Oriented Programming demonstrator\\ Helping Professor to ease her job, focusing more on teaching.\\
-        Creating and evaluating challenging tasks, exams, home works and class works.\\
-        Holding consultations with students, answering their questions, explaining concepts related to OOP.
-        }  
-            
-        \vspace*{0.22cm}
-        \hfill \break
-       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Information Technology Skills
-        \section*{{\faCode} INFORMATION TECHNOLOGY SKILLS}
-        \vspace*{-0.5cm}
-        \hfill \break
-        \begin{multicols}{2}    
-        \begin{itemize}
-        \footnotesize
-            \item \textbf{Java}
-            \item \textbf{Python}
-            \item \textbf{C/C++}
-            \item \textbf{C\#}
-            \item \textbf{.NET}
-            \item \textbf{UNITY Engine}
-            \item \textbf{Swift}
-            \item \textbf{JavaScript}
-            \item \textbf{PhP}
-            \item \textbf{HTML/CSS/BootStrap 5}
-            \item \textbf{MS OFFICE}
-            \item \textbf{Clean Lang}
-            \item \textbf{SQL}
-            \item \textbf{GoLang}
-            \item \textbf{Algorithms and Data Structures}
-            \item \textbf{Database}
-            \item \textbf{Git/GitHub}
-            \item \textbf{Unit/Parameterized testing}
-            \item \textbf{Compilers}: Experience in different stages of a compiler development
-            \item \textbf{UML Modelling}
-            \item \textbf{IoT Fundamentals/Big Data}
-            \item \textbf{Object-Oriented-Programming}
-            \item \textbf{Functional Programming}
-            \item \textbf{Concurrent Programming in Java}
-            \item \textbf{Scripting in Shell(Bash) and Powershell}
-            \item \textbf{Linux Commands}
-            \item \textbf{Distributed communication}
-            \item \textbf{Familiar with RabbitMQ}
-            \item \textbf{Familiar with Jupyter Notebook}
-            \item \textbf{IBM SPSS - IBM Analytics}
-            
-            \item[\vspace{\fill}]
-        \end{itemize}
-        \end{multicols}
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        
-            
-    \end{minipage}} %
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Second Page
-\newpage
-
-\sidebar{sideBarColor!25}
-\newpageheader{titleBackColor}{Ali}{Afzal}{Student \faLightbulbO \hspace{1mm} ELTE}{white}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%%
-\adjustbox{valign=t}{%
-\begin{minipage}{7.3cm} 
-\vspace*{0.4cm} % text starts 0.4cm under the top the header
-        
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Skill and Strengths 
-    \ruleline{\textbf{Soft Skills and Strengths}}
-        \begin{center}
-        \cvtag{Creativity}\cvtag{Curiosity}\cvtag{Flexibility}\cvtag{Self Confidence}\cvtag{Ability to Plan and Organize} \cvtag{Open to feedbacks}\cvtag{Adaptability} \cvtag{Eye for Details}\cvtag{Problem Solving}\cvtag{Team Working}\cvtag{Proactive}\cvtag{Love Learning New Things}\cvtag{Leadership}\cvtag{Good Communication}\cvtag{Managing Information}\cvtag{Diplomacy}\cvtag{Good Listener}\cvtag{Patience}
-        \end{center}
-
-        \hfill \break
-        \hfill \break
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Other Interests
-    \ruleline{\textbf{Other Interests}}
-    \small
-    \begin{multicols}{2}
-        \begin{itemize} 
-            \item  Piano \flag{Piano.png}
-            \item  Chess \flag{Chess.png}
-            \item  Gym \flag{Gym.png}
-            \item  Travelling \flag{Travels.png}
-            \item  Movies \flag{movie2.png}
-            \item  Games \flag{game.png}
-    \end{itemize}
-    \end{multicols}
-    
-    \hfill \break
-    \hfill \break
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % References
-    \ruleline{\textbf{References}}
-    \hfill \break
-       Will be furbished on request.%
-    \hfill \break
-    \hfill \break
-    \hfill \break
-    \hfill \break
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\begin{minipage}[t]{0.5\textwidth} 
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Ali Afzal}}}} % First name
+	
+	\vspace{6pt}
+	
+	{\Large Student $\sim$ ELTE} % Career or current job title
 \end{minipage}
-}%
 \hfill
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN %%%%%%%%%%%%%%%%%%%%%%%%%
-\adjustbox{valign=t}{%
-\begin{minipage}{11.3cm}
-    \vspace*{0.4cm}
+\begin{minipage}[t]{0.2\textwidth} % 20% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+    \icon{User}{11}{06-12-2002}\\
+    \icon{Phone}{11}{+36 706 495284}\\
+    \icon{MapMarker}{11}{Budapest, Hungary}\\
     
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Projects
-        \section*{{\faCode} PROJECTS}
-        \vspace*{-0.5cm}
-        \hfill \break
-        \begin{multicols}{2}    
-        \begin{itemize}
-        \footnotesize
-            \item \textbf{Capitaly Simulation Game}: Java
-            \item \textbf{Atmospheric Gases Simulation}: C++
-            \item \textbf{Light the Bulb Game}: JavaScript
-            \item \textbf{Hunting Game}: A two-player board game developed using the swing framework(GUI) in JAVA
-            \item \textbf{Labyrinth Game}: A maze solving game developed in JAVA, depicts the usage of JDBC and other GUI framework.
-            \item \textbf{Voting Polls Web-Application}: A web application where logged-in users can cast their votes on polls (questionnaires/forms)
-            \item \textbf{Field Race Simulation in a concurrent way}: Muti-Threaded JAVA simulation of field race that features several checkpoints where the players can collect points
-            \item \textbf{An Interior Designer Company Website}: Mini Project using HTML/CSS and Bootstrap 5
-            \item \textbf{Custom Data types implementations}: C++
-            \item \textbf{Latex generated CV}: This CV
-            
-            
-            \item[\vspace{\fill}]
-        \end{itemize}
-        \end{multicols}
-        
-        \hfill \break
+	
+\end{minipage}
+\begin{minipage}[t]{0.27\textwidth} % 27% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	\icon{Envelope}{11}{\href{mailto:afzal.ali.alld@gmail.com}{afzal.ali.alld@gmail.com}}\\	
+    \icon{Github}{11}{\href{https://github.com/afzalaman}{github.com/afzalaman}}\\
+    \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/afzal-ali-elte/}{/in/afzal-ali-elte}}\\    
     
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Awards & Certificates
-    \section*{{\faCertificate} AWARDS \& CERTIFICATES}
-    \hfill \break
-    \adjustbox{valign=t}{\begin{minipage}{2cm}
-    \begin{center}
-        \includegraphics[width=1.2cm]{shRed.png}
-    \end{center}
-    \end{minipage}}
-    \hfill \vline \hfill
-    \adjustbox{valign=t}{\begin{minipage}{9cm}
-        \begin{itemize}
-            \scriptsize 
-            \item Stipendium Hungaricum Scholarship (\textit{Hungary, 2021})-Fully funded Scholarship Programme by Hungarian Government and Tempus Public Foundation to complete my BSc Computer Science at Eötvös Loránd University,Hungary.
-        \end{itemize}
-    \end{minipage}}
-    
-    \vspace*{0.2cm}
-    
-    \adjustbox{valign=t}{\begin{minipage}{2cm}
-    \begin{center}
-        \includegraphics[width=1.2cm]{cisco1.png}
-    \end{center}
-    \end{minipage}}
-    \hfill \vline \hfill
-    \adjustbox{valign=t}{\begin{minipage}{9cm}
-        \begin{itemize}
-            \scriptsize 
-            \item IoT Fundamentals : Big Data \& Analytics  (\textit{CISCO NetaCad, 2022})- Data Analysis using Python and Cisco Tools
-        \end{itemize}
-    \end{minipage}}
-    
-    \vspace*{0.2cm}
+\end{minipage}
 
-    \adjustbox{valign=t}{\begin{minipage}{2cm}
-    \begin{center}
-        \includegraphics[width=1.2cm]{codeAcad.png}
-    \end{center}
-    \end{minipage}}
-    \hfill \vline \hfill
-    \adjustbox{valign=t}{\begin{minipage}{9cm}
-        \begin{itemize}
-            \scriptsize 
-            \item Learn SQL Course (\textit{Codecademy, 2022})
-        \end{itemize}
-    \end{minipage}}
 
-    \vspace*{0.2cm}
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.46\textwidth}
+    \cvsect{Summary}
+	\vspace{-6pt}
+ 
+    %Dummy text
+	I am currently a BSc student at Eötvös Loránd University with a keen interest in Software Engineering. I am also working as an OOP Demonstrator at the University. I am passionate about new technologies and always open to acquiring new knowledge
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.465\textwidth}
+    \cvsect{Skills}
+    \vspace{-6pt}
     
-    \adjustbox{valign=t}{\begin{minipage}{2cm}
-    \begin{center}
-        \includegraphics[width=1.2cm]{linkedin.png}
-    \end{center}
-    \end{minipage}}
-    \hfill \vline \hfill
-    \adjustbox{valign=t}{\begin{minipage}{9cm}
-        \begin{itemize}
-            \scriptsize 
-            \item Parallel and Concurrent Programming with Java (\textit{LinkedIn Learning, 2022})
-            \item Learning Git and GitHub (\textit{LinkedIn Learning, 2022})
-            \item Swift 5 Essential Training (\textit{LinkedIn Learning, 2022})
-        \end{itemize}
-    \end{minipage}}
+    \begin{minipage}[t]{0.2\textwidth}
+        \textbf{Languages:}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.73\textwidth}
+      Java, C/C++, C sharp, SQL, Swift, VBA, Python, JavaScript, HTML, PHP, GoLang, Haskell.  
+    \end{minipage}
+    \vspace{4mm}
     
-    \vspace*{0.2cm}
+    \begin{minipage}[t]{0.2\textwidth}
+        \textbf{Other:}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.73\textwidth}
+    .Net, Apache Jmeter, REST API, Unity Engine, Good knowledge of Algorithms and Data Structures.
+    \end{minipage}
     
-\end{minipage}}
+\end{minipage}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\cvsect{Education}
+\begin{entrylist}
+    \entry
+		{2021 - 2025}
+		{BSc Computer Science }
+		{Eötvös Loránd University, Budapest - HU}
+		{Ongoing, Bachelor's Degree on Stipendium Hungaricum Scholarship}
+  
+  \entry
+		{2016 - 2020}
+		{High School Diploma}
+		{CISCE, New Delhi - IN}
+		{GPA of 3.39 out of 4}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\cvsect{Experience}
+\begin{entrylist}
+	\entry
+        {8/2023 -- 2/2024}
+		{Reporting Team - Intern}
+		{Vodafone Intelligent Solutions - VOIS, Budapest - HU}
+		{\vspace{-10pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+            \item Utilizing VBA in Excel to automate and enhance monthly and quarterly executive reports for senior leadership decision-making.
+            \item Leading the transition from traditional Excel reports to a modern online dashboard format using Qlik Sense technology, ensuring seamless integration and data visualization.
+        \end{itemize} 
+        % \texttt{SQL} \slashsep \texttt{Excel}
+        }
+	\entry
+        {2/2023 -- 7/2024}
+		{OOP Course Demonstrator}
+		{Eötvös Loránd University, Budapest - HU}
+		{\vspace{-10pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+            \item Object Oriented Programming Lab Instructor
+            \item Facilitating teaching responsibilities for Professor by designing and assessing challenging tasks, exams, and coursework in OOP course. Conducting student consultations, addressing inquiries, and explaining OOP concepts to enhance learning experiences.
+        \end{itemize} 
+        % \texttt{SQL} \slashsep \texttt{Excel}
+        }
+	
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+	\cvsect{Languages}
+    \vspace{-6pt}
+    
+    \hspace{26mm} \textbf{English} - C1, \textbf{ Hungarian} - A1, \textbf{ Hindi} - native, \textbf{ Urdu} - native
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+\cvsect{Projects}
+\begin{entrylist}
+    \entry
+		{JAVA}
+		{Capitaly Simulation Game}
+		{\href{https://github.com/afzalaman/Capitaly-Simulation-Game}{github.com}}
+		{%Dummy text 
+        Simulation of a simplified Capitaly game, implementing diverse player strategies, property transactions, and chance events, with parameters read from a text file, allowing for efficient testing and providing detailed game outcomes, including the winning player's financial status and owned properties.}
+    \entry
+		{Rest API}
+		{Rest Mobile Phone}
+		{\href{https://github.com/afzalaman/rest-mobile-phone}
+        {github.com}}
+		{%Dummy text 
+        REST-based application which can store and present information about mobile phones created using the FastAPI framework in Python. It uses Uvicorn server}
+	\entry
+		{C}
+		{Vineyard-Simulation}
+        {\href{https://github.com/afzalaman/Vineyard-Simulation}
+        {github.com}}
+		{A vineyard simulation application for efficient spring season worker management. Utilized inter-process communication techniques, including pipes and message queues, to coordinate worker transportation and provide real-time status updates. Demonstrated expertise in process management and signal handling in a Unix-like environment.}
+    \entry
+		{PHP}
+		{Polling Web Application}
+        {\href{https://github.com/afzalaman/Polling-Web-Application}
+        {github.com}}
+		{A web application where logged-in users can create or cast their votes on polls (questionnaires/forms)}
+    \entry
+		{Concurrency}
+		{Pigs Simulation}
+        {\href{https://github.com/afzalaman/pigs-simulation}
+        {github.com}}
+		{Designed and implemented a multi-threaded simulation in Java. Demonstrated expertise in concurrent programming and simulation design.}
+	\entry
+		{JavaScript}
+		{Light the Bulb Game}
+		{\href{https://github.com/afzalaman/Light-the-bulb-Game}
+        {github.com}}
+		{A grid game developed using JavaScript}
+    \entry
+		{C++}
+		{Atmospheric Gases}
+		{\href{https://github.com/afzalaman/Atmospheric-Gases}
+        {github.com}}
+		{Implemented a concise C++ program using design patterns to simulate atmospheric layer transformations influenced by changing conditions. Demonstrated proficiency in C++, Design Patterns, and File I/O.}
+    \entry
+		{JAVA}
+		{Labyrinth Game}
+		{\href{https://github.com/afzalaman/Labyrinth-Game}
+        {github.com}}
+		{Created a Java Labyrinth game with JDBC integration for database connectivity and Java Swing for the GUI. Implemented dynamic gameplay with a moving dragon, tracked player statistics in a database, and provided features for displaying high scores.}
+    \entry
+		{JAVA}
+		{Hunting Game}
+		{\href{https://github.com/afzalaman/Hunting-Game}
+        {github.com}}
+		{Developed a two-player Hunting Board Game with Java Swing GUI. Players strategically move characters on an adjustable board to either capture or escape.}
+    \entry
+		{Concurrency}
+		{Field Race Simulation}
+		{\href{https://github.com/afzalaman/FieldRace}
+        {github.com}}
+		{Java program for a concurrent field race simulation with players and checkpoints. Implemented thread synchronization using ExecutorService, AtomicBoolean, and ConcurrentHashMap. Achieved dynamic scoring, periodic display, and program termination.}
+    \entry
+		{DSA}
+		{Custom Data types implementations}
+		{\href{https://github.com/afzalaman/DataTypes-Implemetation}
+        {github.com}}
+		{Different datatypes implementation in C++}
+    \entry
+		{HTML/CSS}
+		{Home2Decor Website}
+		{\href{https://github.com/afzalaman/Mini-Website}
+        {github.com}}
+		{A small interior designer company website using HTML/CSS and Bootstrap 5}
+  
+\end{entrylist}
 
 
 \end{document}
